@@ -28,6 +28,10 @@ mongoose
     process.exit(1);
   });
 
+app.get("/",(req,res)=>{
+	res.send("Working...")
+})
+
 // ——— Auth & API Routes ———
 app.use('/api/employee/auth',    employeeAuthRoutes);
 app.use('/api/employees',        employeeRoutes);
